@@ -1,0 +1,19 @@
+@import "compass"
+@import "./common/colors"
+
+body
+    background: $backgroundColor
+    #wrapper
+        color: $textColor
+        .box
+            +box-shadow(2px 2px 2px $textColor)
+            +border-radius(50%)
+            +animation(showBox 2s ease)
+
++keyframes(showBox)
+    from
+        +opacity(0)
+        +transform(rotate(0deg))
+    to
+        +opacity(1)
+        +transform(rotate(180deg))

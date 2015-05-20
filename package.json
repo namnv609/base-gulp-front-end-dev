@@ -1,0 +1,36 @@
+{
+  "name": "base-gulp-front-end-dev",
+  "version": "1.0.0",
+  "description": "Base Gulp project for Front-end development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:namnv609/base-gulp-front-end-dev.git"
+  },
+  "keywords": [
+    "gulp",
+    "base",
+    "project",
+    "front-end",
+    "development"
+  ],
+  "author": "NamNV609",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namnv609/base-gulp-front-end-dev/issues"
+  },
+  "homepage": "https://github.com/namnv609/base-gulp-front-end-dev",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-coffee": "^2.3.1",
+    "gulp-compass": "^2.0.4",
+    "gulp-less": "^3.0.3",
+    "gulp-notify": "^2.2.0",
+    "gulp-watch": "^4.2.4",
+    "require-dir": "^0.3.0"
+  }
+}

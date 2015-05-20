@@ -1,0 +1,8 @@
+var gulp = require("gulp");
+
+gulp.task("default", [
+    "compass",
+    "coffee",
+    "less",
+    "watch"
+]);
