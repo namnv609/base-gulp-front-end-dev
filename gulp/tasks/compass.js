@@ -2,7 +2,8 @@ var gulp = require("gulp"),
     compass = require("gulp-compass"),
     notify = require("gulp-notify"),
     errorHandler = require("../util/errorHandler"),
-    config = require("../config").compass;
+    config = require("../config").compass,
+    reload = require("browser-sync").reload;
 
 gulp.task("compass", function() {
     gulp.src([
@@ -15,7 +16,9 @@ gulp.task("compass", function() {
         css: config.dest
     })).on("error", errorHandler).pipe(
         gulp.dest(config.dest)
-    ).pipe(
+    ).pipe(reload({
+        stream: true
+    })).pipe(
         notify("Complied <%= file.relative %>")
     )
 });

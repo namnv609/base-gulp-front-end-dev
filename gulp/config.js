@@ -25,5 +25,8 @@ module.exports = {
         get watch() {
             return this.src + "/**/*.less"
         }
+    },
+    html: {
+        src: "./*.html",
     }
 }

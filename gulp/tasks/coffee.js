@@ -2,7 +2,8 @@ var gulp = require("gulp"),
     coffee = require("gulp-coffee"),
     notify = require("gulp-notify"),
     errorHandler = require("../util/errorHandler"),
-    config = require("../config").coffee;
+    config = require("../config").coffee,
+    reload = require("browser-sync").reload;
 
 gulp.task("coffee", function() {
     gulp.src([
@@ -13,7 +14,10 @@ gulp.task("coffee", function() {
         })
     ).on("error", errorHandler).pipe(
         gulp.dest(config.dest)
-    ).pipe(
+    ).pipe(reload({
+        stream: true
+    }))
+    .pipe(
         notify("Compiled <%= file.relative %>")
     )
 });

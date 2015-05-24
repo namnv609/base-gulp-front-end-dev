@@ -1,6 +1,7 @@
 var gulp = require("gulp"),
     watch = require("gulp-watch"),
-    config = require("../config");
+    config = require("../config")
+    broswerSync = require("browser-sync");
 
 gulp.task("watch", function() {
     watch(config.compass.watch, function() {
@@ -12,4 +13,5 @@ gulp.task("watch", function() {
     watch(config.less.watch, function() {
         gulp.start("less");
     });
+    watch(config.html.src, broswerSync.reload);
 });
